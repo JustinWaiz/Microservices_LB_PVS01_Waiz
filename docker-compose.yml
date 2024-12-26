@@ -56,7 +56,54 @@ services:
     volumes:
       - mongo3-data:/data/db
       - mongo3-config:/data/configdb
-
+  consumer-aapl:
+    image: justin799/consumer
+    environment:
+      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_PORT: 5672
+      RABBITMQ_USER: stockmarket
+      RABBITMQ_PASS: supersecret123
+      RABBITMQ_QUEUE: AAPL
+      MONGODB_URI: mongodb://host.docker.internal:27017,host.docker.internal:27018,host.docker.internal:27019/?replicaSet=rs0
+      MONGODB_DB: stockmarket
+      MONGODB_COLLECTION: stocks
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+      mongo1:
+        condition: service_healthy
+  consumer-msft:
+    image: justin799/consumer
+    environment:
+      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_PORT: 5672
+      RABBITMQ_USER: stockmarket
+      RABBITMQ_PASS: supersecret123
+      RABBITMQ_QUEUE: MSFT
+      MONGODB_URI: mongodb://host.docker.internal:27017,host.docker.internal:27018,host.docker.internal:27019/?replicaSet=rs0
+      MONGODB_DB: stockmarket
+      MONGODB_COLLECTION: stocks
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+      mongo1:
+        condition: service_healthy
+  consumer-tsla:
+    image: justin799/consumer
+    environment:
+      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_PORT: 5672
+      RABBITMQ_USER: stockmarket
+      RABBITMQ_PASS: supersecret123
+      RABBITMQ_QUEUE: TSLA
+      MONGODB_URI: mongodb://host.docker.internal:27017,host.docker.internal:27018,host.docker.internal:27019/?replicaSet=rs0
+      MONGODB_DB: stockmarket
+      MONGODB_COLLECTION: stocks
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+      mongo1:
+        condition: service_healthy
 
 volumes:
   mongo1-data:
