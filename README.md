@@ -72,13 +72,19 @@ This project showcases the integration of modern tools and technologies like **D
 - stock-liveview image tagged
 - stock-liveview image published to docker
 - 1 frontend added to docker compose file and configured
-- all containers running properly
+- all containers tested (all running properly)
+    - producer successfully create and sends data to RabbitMQ
+    - RabbitMQ successfuly holds data in queues
+    - 3 consumers successfully retrieve data from RabbitMQ queues, compute the average price and store the results in the MongoDB cluster
+    - frontend presents provides a live view of the financial data stored in the MongoDB cluster
 ### 6th git commit ###
 - checklist formated
 - introduction to project written
 - open points: 
     - chapter "Getting started (How to use this project/files)"
     - NGINX "Load Balancer"
+### 7th git commit ###
+- "all containers tested" updated
 
 
 
