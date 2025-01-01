@@ -12,7 +12,7 @@
 - stock-publisher image tagged
 - stock-publisher image published to docker
 
-    ## second git commit ##
+    ## first git commit ##
 
 - docker-compose.yml created
 - RabbitMQ added to docker compose file
@@ -40,14 +40,18 @@
 01.01.2025:
 - README.md formated
 
+    ## 4th git commit ##
+
+- README.md formated
 
 
 
 
-#################### checklist ##################
-Producer "Stock-Publisher"          ->      done
-Rabbit MQ "Message Broker"          ->      done
-Consumer                            ->      done
-MongoDB Cluster                     ->      done
-Frontend "Stock-Liveview"
-NGINX "Load Balancer"
+
+<p>#################### checklist ##################</p>
+<p>Producer "Stock-Publisher"          ->      done</p>
+<p>Rabbit MQ "Message Broker"          ->      done</p>
+<p>Consumer                            ->      done</p>
+<p>MongoDB Cluster                     ->      done</p>
+<p>Frontend "Stock-Liveview"</p>
+<p>NGINX "Load Balancer"</p>
