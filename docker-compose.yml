@@ -104,6 +104,17 @@ services:
         condition: service_healthy
       mongo1:
         condition: service_healthy
+  stock-liveview:
+    image: justin799/stock-liveview
+    ports:
+      - 3000:3000
+    depends_on:
+      mongo1:
+        condition: service_healthy
+    environment:
+      MONGODB_URL: mongodb://host.docker.internal:27017,host.docker.internal:27018,host.docker.internal:27019/?replicaSet=rs0
+      MONGODB_DB: stockmarket
+      MONGODB_COLLECTION: stocks
 
 volumes:
   mongo1-data:
