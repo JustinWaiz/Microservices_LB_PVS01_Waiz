@@ -32,7 +32,7 @@ This project showcases the integration of modern tools and technologies like **D
 `justin799/stock-publisher`
 ### Consumer ###
 `justin799/consumer`
-### PrFrontend "Stock-Liveview" ###
+### Frontend "Stock-Liveview" ###
 `justin799/stock-liveview`
 
 # Project log #
@@ -96,6 +96,8 @@ This project showcases the integration of modern tools and technologies like **D
 ### 8th git commit ###
 ## 03.01.2024 ##
 - Path to Docker container images added
+### 9th git commit ##
+- corrected typo in "path of Docker container images"
 
 
 
