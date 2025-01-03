@@ -27,6 +27,14 @@ This project implements a **distributed financial system** designed to simulate 
 
 This project showcases the integration of modern tools and technologies like **Docker**, **RabbitMQ**, **MongoDB**, and **Node.js** to create a robust distributed system.
 
+# Docker container images #
+### Producer "Stock-Publisher" ###
+`justin799/stock-publisher`
+### Consumer ###
+`justin799/consumer`
+### PrFrontend "Stock-Liveview" ###
+`justin799/stock-liveview`
+
 # Project log #
 ## 25.12.2024 ##
 - project folder created
@@ -85,6 +93,9 @@ This project showcases the integration of modern tools and technologies like **D
     - NGINX "Load Balancer"
 ### 7th git commit ###
 - "all containers tested" updated
+### 8th git commit ###
+## 03.01.2024 ##
+- Path to Docker container images added
 
 
 
@@ -95,5 +106,5 @@ This project showcases the integration of modern tools and technologies like **D
 | Rabbit MQ "Message Broker" | done |
 | Consumer | done |
 | MongoDB Cluster | done |
-| Frontend "Stock-Liveview" | done |
+| Frontend "Stock-Liveview" | done (1/2) |
 | NGINX "Load Balancer" | not started |
