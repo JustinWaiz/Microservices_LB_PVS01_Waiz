@@ -98,6 +98,8 @@ This project showcases the integration of modern tools and technologies like **D
 - Path to Docker container images added
 ### 9th git commit ##
 - corrected typo in "path of Docker container images"
+### 10th git commit ###
+- docker compose: adjusted healtcheck of MongoDB cluster for all consumers and liveview
 
 
 
