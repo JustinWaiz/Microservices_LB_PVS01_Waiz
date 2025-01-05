@@ -47,14 +47,12 @@ This project showcases the integration of modern tools and technologies like **D
 - stock-publisher image builded
 - stock-publisher image tagged
 - stock-publisher image published to docker
-### first git commit ###
 - docker-compose.yml created
 - RabbitMQ added to docker compose file
 - Stock-Publisher added to docker compose file
 - MongoDB cluster added to docker compose file
     - connection string: mongodb://host.docker.internal:27017,host.docker.internal:27018,host.docker.internal:27019/?replicaSet=rs0 (internal: mongodb://mongo1:27017,mongo2:27018,mongo3:27019/?replicaSet=rs0)
 - DB and collaction created
-### second git commit ###
 ## 26.12.2024 ##
 - folder consumer created
 - file consumer\consumer.py created
@@ -66,12 +64,8 @@ This project showcases the integration of modern tools and technologies like **D
 - consumer image published to docker
 - 3 consumer added to docker compose file and configured 
 - healthchecks adjusted
-### third git commit ###
 ## 01.01.2025 ##
 - README.md formated
-### 4th git commit ###
-- README.md formated
-### 5th git commit ###
 - folder frontend created
 - frontend files to frontend copied
 - frontend\Dockerfile configured
@@ -85,20 +79,16 @@ This project showcases the integration of modern tools and technologies like **D
     - RabbitMQ successfuly holds data in queues
     - 3 consumers successfully retrieve data from RabbitMQ queues, compute the average price and store the results in the MongoDB cluster
     - frontend presents provides a live view of the financial data stored in the MongoDB cluster
-### 6th git commit ###
 - checklist formated
 - introduction to project written
 - open points: 
     - chapter "Getting started (How to use this project/files)"
     - NGINX "Load Balancer"
-### 7th git commit ###
 - "all containers tested" updated
-### 8th git commit ###
 ## 03.01.2024 ##
 - Path to Docker container images added
-### 9th git commit ##
 - corrected typo in "path of Docker container images"
-### 10th git commit ###
+## 05.01.2024 ##
 - docker compose: adjusted healtcheck of MongoDB cluster for all consumers and liveview
 
 
