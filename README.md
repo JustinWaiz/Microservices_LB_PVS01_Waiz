@@ -90,6 +90,7 @@ This project showcases the integration of modern tools and technologies like **D
 - corrected typo in "path of Docker container images"
 ## 05.01.2024 ##
 - docker compose: adjusted healtcheck of MongoDB cluster for all consumers and liveview
+- picture uploaded
 
 
 
