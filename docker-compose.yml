@@ -12,6 +12,8 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+    networks:
+      - rabbitmq-network
   stock-publisher:
     image: justin799/stock-publisher
     depends_on:
@@ -19,6 +21,9 @@ services:
         condition: service_healthy
     environment:
       RABBITMQ_URL: amqp://stockmarket:supersecret123@rabbitmq:5672/
+    networks:
+      - rabbitmq-network
+    restart: always
   mongo1:
     image: mongo:7.0
     ports:
@@ -34,6 +39,8 @@ services:
       test: ["CMD", "bash", "-c", "echo 'try { rs.status() } catch (err) { rs.initiate({_id:\"rs0\",members:[{_id:0,host:\"host.docker.internal:27017\",priority:1},{_id:1,host:\"host.docker.internal:27018\",priority:0.5},{_id:2,host:\"host.docker.internal:27019\",priority:0.5}]}) }' | mongosh --port 27017 --quiet"]
       interval: 10s
       retries: 5
+    networks:
+      - mongodb-network
   mongo2:
     image: mongo:7.0
     ports:
@@ -45,6 +52,8 @@ services:
     volumes:
       - mongo2-data:/data/db
       - mongo2-config:/data/configdb
+    networks:
+      - mongodb-network
   mongo3:
     image: mongo:7.0
     ports:
@@ -56,6 +65,8 @@ services:
     volumes:
       - mongo3-data:/data/db
       - mongo3-config:/data/configdb
+    networks:
+      - mongodb-network
   consumer-aapl:
     image: justin799/consumer
     environment:
@@ -76,6 +87,9 @@ services:
       timeout: 5s
       retries: 5
     restart: always
+    networks:
+      - rabbitmq-network
+      - mongodb-network
   consumer-msft:
     image: justin799/consumer
     environment:
@@ -96,6 +110,9 @@ services:
       timeout: 5s
       retries: 5
     restart: always
+    networks:
+      - rabbitmq-network
+      - mongodb-network    
   consumer-tsla:
     image: justin799/consumer
     environment:
@@ -116,6 +133,9 @@ services:
       timeout: 5s
       retries: 5
     restart: always
+    networks:
+      - rabbitmq-network
+      - mongodb-network    
   stock-liveview:
     image: justin799/stock-liveview
     ports:
@@ -130,6 +150,9 @@ services:
       MONGODB_URL: mongodb://host.docker.internal:27017,host.docker.internal:27018,host.docker.internal:27019/?replicaSet=rs0
       MONGODB_DB: stockmarket
       MONGODB_COLLECTION: stocks
+    networks:
+      - mongodb-network
+      - frontend-network
 
 volumes:
   mongo1-data:
@@ -138,3 +161,11 @@ volumes:
   mongo2-config:
   mongo3-data:
   mongo3-config:
+
+networks:
+  rabbitmq-network:
+    driver: bridge
+  mongodb-network:
+    driver: bridge
+  frontend-network:
+    driver: bridge
