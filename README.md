@@ -85,12 +85,15 @@ This project showcases the integration of modern tools and technologies like **D
     - chapter "Getting started (How to use this project/files)"
     - NGINX "Load Balancer"
 - "all containers tested" updated
-## 03.01.2024 ##
+## 03.01.2025 ##
 - Path to Docker container images added
 - corrected typo in "path of Docker container images"
-## 05.01.2024 ##
+## 05.01.2025 ##
 - docker compose: adjusted healtcheck of MongoDB cluster for all consumers and liveview
 - picture uploaded
+## 08.01.2025:
+- networks (rabbitmq-network, mongodb-network, frontend-network) added
+- docker compose changed to use MongoDB service names in URL
 
 
 
