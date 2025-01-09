@@ -107,5 +107,5 @@ This project showcases the integration of modern tools and technologies like **D
 | Rabbit MQ "Message Broker" | done |
 | Consumer | done |
 | MongoDB Cluster | done |
-| Frontend "Stock-Liveview" | done (1/2) |
-| NGINX "Load Balancer" | not started |
+| Frontend "Stock-Liveview" | done |
+| NGINX "Load Balancer" | done |
