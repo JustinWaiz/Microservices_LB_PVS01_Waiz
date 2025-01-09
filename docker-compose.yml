@@ -136,10 +136,11 @@ services:
     networks:
       - rabbitmq-network
       - mongodb-network    
-  stock-liveview:
+  stock-liveview-1:
     image: justin799/stock-liveview
     ports:
-      - 3000:3000
+      - 3001:3000
+    container_name: stock-liveview-1
     healthcheck:
       test: ["CMD-SHELL", "mongosh 'mongodb://mongo1:27017,mongo2:27018,mongo3:27019/?replicaSet=rs0' --eval 'db.adminCommand(\"ping\")'"]
       interval: 10s
@@ -152,6 +153,36 @@ services:
       MONGODB_COLLECTION: stocks
     networks:
       - mongodb-network
+      - frontend-network
+  stock-liveview-2:
+    image: justin799/stock-liveview
+    ports:
+      - 3002:3000
+    container_name: stock-liveview-2
+    healthcheck:
+      test: ["CMD-SHELL", "mongosh 'mongodb://mongo1:27017,mongo2:27018,mongo3:27019/?replicaSet=rs0' --eval 'db.adminCommand(\"ping\")'"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: always
+    environment:
+      MONGODB_URL: mongodb://mongo1:27017,mongo2:27018,mongo3:27019/?replicaSet=rs0
+      MONGODB_DB: stockmarket
+      MONGODB_COLLECTION: stocks
+    networks:
+      - mongodb-network
+      - frontend-network
+  nginx:
+    image: nginx
+    container_name: nginx-loadbalancer
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - "80:80"
+    depends_on:
+      - stock-liveview-1
+      - stock-liveview-2
+    networks:
       - frontend-network
 
 volumes:
