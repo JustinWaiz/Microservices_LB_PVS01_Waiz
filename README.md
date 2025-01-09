@@ -91,9 +91,12 @@ This project showcases the integration of modern tools and technologies like **D
 ## 05.01.2025 ##
 - docker compose: adjusted healtcheck of MongoDB cluster for all consumers and liveview
 - picture uploaded
-## 08.01.2025:
+## 08.01.2025: ##
 - networks (rabbitmq-network, mongodb-network, frontend-network) added
 - docker compose changed to use MongoDB service names in URL
+## 09.01.2025: ##
+- 2nd frontend added
+- NGINX Loadbalancer added
 
 
 
