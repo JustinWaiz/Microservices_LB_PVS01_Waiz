@@ -35,6 +35,35 @@ This project showcases the integration of modern tools and technologies like **D
 ### Frontend "Stock-Liveview" ###
 `justin799/stock-liveview`
 
+# Getting started #
+Below you will find instructions how to use this project
+## Prerequisites ##
+- Docker Desktop to run the composition (https://www.docker.com/products/docker-desktop/)
+    - on operating systems with no GUI you can use this documentation (https://docs.docker.com/engine/install/) to install docker
+- MongoDB Compass to view database entries (https://www.mongodb.com/try/download/compass)
+- Browser to access frontend and management of RabbitMQ
+## Installing and Running ##
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/JustinWaiz/Microservices_LB_PVS01_Waiz.git
+   cd Microservices_LB_PVS01_Waiz
+   ```
+
+2. **Run the composition**
+
+   ```bash
+    docker-compose up -d
+   ```
+
+## Access the applications ##
+- Database cluster
+    - Open MongoDB Compass and enter the connection string `mongodb://host.docker.internal:27017,host.docker.internal:27018,host.docker.internal:27019/?replicaSet=rs0`
+- RabbitMQ
+    - Access the management platform over `localhost:15672`
+- Frontend "Stock-Liveview"
+    - Access the frontend over `localhost:80`
+
 # Project log #
 ## 25.12.2024 ##
 - project folder created
@@ -97,6 +126,8 @@ This project showcases the integration of modern tools and technologies like **D
 ## 09.01.2025: ##
 - 2nd frontend added
 - NGINX Loadbalancer added
+## 11.01.2025: ##
+- "Getting started" added to README.md
 
 
 
