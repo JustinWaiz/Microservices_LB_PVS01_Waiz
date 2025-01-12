@@ -56,6 +56,18 @@ Below you will find instructions how to use this project.
     docker-compose up -d
    ```
 
+3. **View logs**
+
+   ```bash
+    docker-compose logs <container-name>
+   ```
+
+4. **Stop the composition**
+
+   ```bash
+    docker-compose down
+   ```
+
 ## Access the applications ##
 - Database cluster
     - Open MongoDB Compass and enter the connection string `mongodb://host.docker.internal:27017,host.docker.internal:27018,host.docker.internal:27019/?replicaSet=rs0`
