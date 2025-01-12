@@ -36,12 +36,12 @@ This project showcases the integration of modern tools and technologies like **D
 `justin799/stock-liveview`
 
 # Getting started #
-Below you will find instructions how to use this project
+Below you will find instructions how to use this project.
 ## Prerequisites ##
 - Docker Desktop to run the composition (https://www.docker.com/products/docker-desktop/)
-    - on operating systems with no GUI you can use this documentation (https://docs.docker.com/engine/install/) to install docker
+    - on operating systems without a GUI, you can use this documentation (https://docs.docker.com/engine/install/) to install docker
 - MongoDB Compass to view database entries (https://www.mongodb.com/try/download/compass)
-- Browser to access frontend and management of RabbitMQ
+- Browser to access frontend (stock-liveview) and RabbitMQ management 
 ## Installing and Running ##
 1. **Clone the repository**
 
