@@ -173,10 +173,8 @@ services:
       - mongodb-network
       - frontend-network
   nginx:
-    image: nginx
+    image: justin799/pvs-nginx
     container_name: nginx-loadbalancer
-    volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
     ports:
       - "80:80"
     depends_on:
