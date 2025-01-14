@@ -57,7 +57,7 @@ def main():
                 # If 1000 messages collected
                 if len(buffer) >= 1000:
                     prices = [msg["price"] for msg in buffer]
-                    avg_price = sum(prices) / len(prices)
+                    avg_price = round(sum(prices) / len(prices), 2)
                     company = buffer[0]["company"]
 
                     # Save result in MongoDB

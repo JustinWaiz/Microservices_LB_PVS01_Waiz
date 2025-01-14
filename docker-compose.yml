@@ -68,7 +68,7 @@ services:
     networks:
       - mongodb-network
   consumer-aapl:
-    image: justin799/consumer
+    image: justin799/consumer:2
     environment:
       RABBITMQ_HOST: rabbitmq
       RABBITMQ_PORT: 5672
@@ -91,7 +91,7 @@ services:
       - rabbitmq-network
       - mongodb-network
   consumer-msft:
-    image: justin799/consumer
+    image: justin799/consumer:2
     environment:
       RABBITMQ_HOST: rabbitmq
       RABBITMQ_PORT: 5672
@@ -114,7 +114,7 @@ services:
       - rabbitmq-network
       - mongodb-network    
   consumer-tsla:
-    image: justin799/consumer
+    image: justin799/consumer:2
     environment:
       RABBITMQ_HOST: rabbitmq
       RABBITMQ_PORT: 5672
