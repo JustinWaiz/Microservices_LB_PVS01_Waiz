@@ -150,3 +150,14 @@ Below you will find instructions how to use this project.
 - image pushed
 - added overview on Docker Hub for this image
 - docker compose file updated to use justin799/consumer:2
+- folder nginx created
+- nginx.conf moved to nginx folder
+- Dockerfile created and configured
+- image created, tagged and pushed to docker hub
+- docker compose file adjusted with custom nginx image
+- consumer tested:
+  1. database deleted and all consumer stopped
+  2. stock-publisher runned until every queue of RabbitMQ had approximately 22k - 23k messages
+  3. all consumer started successively
+  4. checked if all RabbitMQ queues were emtpy
+  5. checked if every group (AAPL, TSLA, MSFT) has approximately 22 - 23 entries in the database
