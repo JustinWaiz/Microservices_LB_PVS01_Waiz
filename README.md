@@ -144,3 +144,9 @@ Below you will find instructions how to use this project.
 - instructions for viewing logs and stopping the composition added
 ## 14.01.2025: ##
 - checklist removed as no longer needed
+- consumer.py edited to round stock prices
+- consumer image rebuilded
+- image tagged: 2
+- image pushed
+- added overview on Docker Hub for this image
+- docker compose file updated to use justin799/consumer:2
