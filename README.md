@@ -140,15 +140,7 @@ Below you will find instructions how to use this project.
 - NGINX Loadbalancer added
 ## 11.01.2025: ##
 - "Getting started" added to README.md
-
-
-
-# Checklist #
-| component | state|
-| ------------ | ------------ |
-| Producer "Stock-Publisher" | done |
-| Rabbit MQ "Message Broker" | done |
-| Consumer | done |
-| MongoDB Cluster | done |
-| Frontend "Stock-Liveview" | done |
-| NGINX "Load Balancer" | done |
+## 12.01.2025: ##
+- instructions for viewing logs and stopping the composition added
+## 14.01.2025: ##
+- checklist removed as no longer needed
