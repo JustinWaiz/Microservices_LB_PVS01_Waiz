@@ -162,5 +162,5 @@ Below you will find instructions how to use this project.
   2. stock-publisher runned until every queue of RabbitMQ had approximately 22k - 23k messages
   3. all consumer started successively
   4. checked if all RabbitMQ queues were emtpy
-  ## 16.01.2025 ##
-  - Path to Docker container images updated with custom nginx image
+## 16.01.2025 ##
+- Path to Docker container images updated with custom nginx image
