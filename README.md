@@ -34,6 +34,8 @@ This project showcases the integration of modern tools and technologies like **D
 `justin799/consumer`
 ### Frontend "Stock-Liveview" ###
 `justin799/stock-liveview`
+### NGINX "Load Balancer" ###
+`justin799/pvs-nginx`
 
 # Getting started #
 Below you will find instructions how to use this project.
@@ -160,4 +162,5 @@ Below you will find instructions how to use this project.
   2. stock-publisher runned until every queue of RabbitMQ had approximately 22k - 23k messages
   3. all consumer started successively
   4. checked if all RabbitMQ queues were emtpy
-  5. checked if every group (AAPL, TSLA, MSFT) has approximately 22 - 23 entries in the database
+  ## 16.01.2025 ##
+  - Path to Docker container images updated with custom nginx image
